@@ -8,7 +8,7 @@ trigger:
 - master
 
 pool:
-  name: Private_hosted_pool
+  name: Hosted Agent
 
 steps:
 - task: Maven@3
