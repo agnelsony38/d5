@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: Private_hosted_pool
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
