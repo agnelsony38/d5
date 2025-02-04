@@ -1,4 +1,4 @@
-<h1> RahulShettyAcademy.com Learning</h1>
+<h1> Devops labproject2025 Learning</h1>
 <h2> Learn QA Automation tools + Devops Tools CI/CD pipelines in course from Scratch to end All</h2>
 <h2> Good Luck and we are almost done with the course for 2025 Devops Course.Thankyou
 The project I will be handling is deploying a web app in Tomcat server
