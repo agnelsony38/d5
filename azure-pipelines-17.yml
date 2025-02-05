@@ -10,6 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- checkout: self
+
+- script: |
+    which google-chrome || which chromium-browser
+    google-chrome --version || chromium-browser --version
+  displayName: 'Check Chrome/Chromium Version on Agent'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,13 +27,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-jobs:
 
 jobs:
   - job: Install_ChromeDriver
     steps:
       - task: UseChromeDriver@0
         inputs:
-          versionSpec: '133.0.6943.54'  # Specifying the version
-          chromeDriverVersion: '133.0.6943.54'  # Confirming version for use
-      # Additional steps
+          versionSpec: '133.0.6943.54'
+          chromeDriverVersion: '133.0.6943.54'
