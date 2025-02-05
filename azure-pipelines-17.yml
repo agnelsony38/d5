@@ -20,3 +20,12 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+jobs:
+
+  - job: Install_ChromeDriver
+    steps:
+      - task: UseChromeDriver@0
+        inputs:
+          versionSpec: '133.0.6943.54'  # Specifying the ChromeDriver version here
+          chromeDriverVersion: '133.0.6943.54'  # Optional, but can be specified to match the Chrome version
+      # Your other steps to run the tests or build
